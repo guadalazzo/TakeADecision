@@ -3,6 +3,7 @@ import "./styles.scss";
 import PercentBar from "../../components/PercentBar";
 import Argument from "../../components/Argument";
 import ArgumentModal from "../../components/ArgumentModal";
+import { LOCAL_URI } from "../../constants";
 import axios from "axios";
 
 function NewDilemma(props) {
@@ -72,7 +73,7 @@ function NewDilemma(props) {
     }
     setRequired(false);
     axios
-      .post("http://localhost:3005/dilemma", {
+      .post(`${LOCAL_URI}/dilemma`, {
         title,
         proArgs,
         conArgs,

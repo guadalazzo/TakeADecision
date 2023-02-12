@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./styles.scss";
 import axios from "axios";
 import { Loading } from "./../../components/Loading";
+import { LOCAL_URI } from "../../constants";
+
 function App(props) {
   const [hasDilemmas, setHasDilemma] = useState(false);
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    axios.get("http://localhost:3005/dilemmas").then((response) => {
+    axios.get(`${LOCAL_URI}/dilemmas`).then((response) => {
       setHasDilemma(response.data.length !== 0);
       setLoading(false);
       return response.data;

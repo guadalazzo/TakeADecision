@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Argument from "../../components/Argument";
 import { Loading } from "../../components/Loading";
+import { LOCAL_URI } from "../../constants";
 import "./styles.scss";
 
 function Dilemmas(props) {
@@ -17,7 +18,7 @@ function Dilemmas(props) {
     props.history.push(`/dilemma/${id}`);
   };
   useEffect(() => {
-    axios.get("http://localhost:3005/dilemmas").then((response) => {
+    axios.get(`${LOCAL_URI}/dilemmas`).then((response) => {
       setDilemmas(response.data);
       setLoading(false);
       return response.data;

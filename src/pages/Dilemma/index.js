@@ -5,6 +5,7 @@ import Argument from "../../components/Argument";
 import ArgumentModal from "../../components/ArgumentModal";
 import axios from "axios";
 import { Loading } from "../../components/Loading";
+import { LOCAL_URI } from "../../constants";
 
 function Dilemma(props) {
   const [title, setTitle] = useState("");
@@ -21,7 +22,7 @@ function Dilemma(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3005/dilemma/${props.match.params.id}`)
+      .get(`${LOCAL_URI}/dilemma/${props.match.params.id}`)
       .then((res) => {
         setTitle(res.data.title);
         setProArg(res.data.proArgs);
@@ -89,7 +90,7 @@ function Dilemma(props) {
     }
     setRequired(false);
     axios
-      .put(`http://localhost:3005/dilemma/${props.match.params.id}`, {
+      .put(`${LOCAL_URI}/dilemma/${props.match.params.id}`, {
         title,
         proArgs,
         conArgs,
