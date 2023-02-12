@@ -1,0 +1,90 @@
+@import '../../variables';
+
+.App {
+  background-color: #282c34;
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    margin: 15px 0;
+    color: #fff;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    width: 80%;
+
+    button {
+      height: 29px;
+      margin: auto;
+      border-radius: 0 5px 5px 0;
+      width: 80px;
+    }
+  }
+
+  input {
+    width: 80%;
+    padding: 3px;
+    margin: auto;
+    box-sizing: border-box;
+    &.alert {
+      border: 2px solid red;
+    }
+  }
+}
+button {
+  height: 40px;
+}
+article {
+  width: 80%;
+  height: 60%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  button {
+    height: 40px;
+  }  
+  .pros {
+    padding: 5px;
+    flex-grow: 1;
+    position: relative;
+    max-width: 50%;
+    button {
+      width: 80%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      &.pro-btn {
+        border: 2px solid #05da8e
+      }
+    }
+  }
+
+  .line {
+    display: block;
+    width: 1px;
+    background-color: #cccbcb;
+  }
+
+  .cons {
+    padding: 5px;
+    flex-grow: 1;
+    position: relative;
+    max-width: 50%;
+    button {
+      width: 80%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      &.cons-btn {
+        border: 2px solid #d01c54;
+      }
+    }
+  }
+}

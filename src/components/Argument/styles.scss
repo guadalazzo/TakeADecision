@@ -1,0 +1,30 @@
+.argument-container {
+    color: #ffffff;
+    height: fit-content;
+    width: 95%;
+    font-size: 13px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+
+    p {
+        height: 100%;
+        padding: 3px;
+    }
+    span {
+        margin: auto 0;
+    }
+    &.pro-arg{
+        border: 2px solid #05da8e;
+    }
+    &.cons-arg{
+        border: 2px solid #d01c54;
+    }
+    &.con-arg{
+        border: 2px solid #d01c54;
+    }
+}
+.dilemmas .argument-container p {
+    width: 60%;
+}
