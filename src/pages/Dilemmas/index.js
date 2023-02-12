@@ -42,7 +42,7 @@ function Dilemmas(props) {
                     key={index.toString()}
                     text={dilemma.title}
                     type={type}
-                    id={dilemma.id}
+                    id={dilemma._id}
                     setDilemmas={setDilemmas}
                     openDetail={openDetail}
                   />

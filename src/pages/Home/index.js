@@ -25,9 +25,7 @@ function App(props) {
       ) : (
         <header className="App-header">
           <section className="arrows">
-            <span className="arrow-1"></span>
-            <span className="arrow-2"></span>
-            <span className="arrow-3"></span>
+            <img src="/images/arrows.png" alt="logo" />
           </section>
           <button onClick={handleClick}>New Decision</button>
         </header>

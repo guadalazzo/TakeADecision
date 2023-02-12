@@ -26,68 +26,6 @@
   align-items: flex-end;
   width: 180px;
 }
-.arrow-2,.arrow-1, .arrow-3 {
-  background: white;
-  display: block;
-  width: 26px;
-  height: 132px;
-  position: relative;
-}
-.arrow-2::before {
-  content: '';
-  position: absolute;
-  top: -70px;
-  right: -37px;
-  height: 20px;
-  width: 100px;
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 0 50px 75px 50px;
-  border-color: transparent transparent #ffff transparent;
-  display: block;
-}
-.arrow-3::before {
-  content: '';
-  position: absolute;
-  top: -70px;
-  right: -37px;
-  height: 20px;
-  width: 100px;
-  border-style: solid;
-  border-width: 0 50px 75px 50px;
-  border-color: transparent transparent #ffff transparent;
-  border-radius: 5px;
-  display: block;
-}
-.arrow-3 {
-  transform: rotate(45deg);
-  width: 26px;
-  height: 120px;
-  margin-bottom: 0px;
-  bottom: -9px;
-  left: -30px;
-}
-.arrow-1::before {
-  content: '';
-  position: absolute;
-  top: -70px;
-  right: -37px;
-  height: 20px;
-  width: 100px;
-  border-style: solid;
-  border-radius: 5px;
-  border-width: 0 50px 75px 50px;
-  border-color: transparent transparent #ffff transparent;
-  display: block;
-}
-.arrow-1 {
-  transform: rotate(-45deg);
-  width: 26px;
-  height: 120px;
-  margin-bottom: 0px;
-  bottom: -9px;
-  left: 30px;
-}
 button {
   background: #7F1C34;
   color: white;
@@ -96,4 +34,21 @@ button {
   border-radius: 5px;
   height: 50px;
   width: 150px;
+}
+.arrows img {
+  border: none;
+  display: block;
+  height: auto;
+  max-width: 65%;
+  margin: 0 auto;
+  filter: invert(1);
+}
+
+@media (min-width:320px){
+  .App-header {
+    button {
+      width: fit-content;
+      padding: 5px;
+    }
+  }
 }

@@ -13,9 +13,17 @@ const Argument = (props) => {
 
   return (
     <section className={`argument-container ${type}-arg`}>
-      {id && <span onClick={deleteDilemma}>eliminar</span>}
+      {id && (
+        <span className="btn btn-delete" onClick={deleteDilemma}>
+          DELETE
+        </span>
+      )}
       <p>{text}</p>
-      {id && <span onClick={openDetail.bind(this, id)}>editar</span>}
+      {id && (
+        <span className="btn btn-edit" onClick={openDetail.bind(this, id)}>
+          EDIT
+        </span>
+      )}
     </section>
   );
 };

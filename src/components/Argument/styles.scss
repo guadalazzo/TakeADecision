@@ -1,3 +1,4 @@
+@import './../../variables';
 .argument-container {
     color: #ffffff;
     height: fit-content;
@@ -5,9 +6,9 @@
     font-size: 13px;
     margin: 10px auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: center;
-
+    padding: 5px;
     p {
         height: 100%;
         padding: 3px;
@@ -23,6 +24,13 @@
     }
     &.con-arg{
         border: 2px solid #d01c54;
+    }
+    .btn {
+        cursor: pointer;
+        background-color: $color-2;
+        padding: 3px 5px;
+        border: 1px solid $color-5;
+        border-radius: 3px;
     }
 }
 .dilemmas .argument-container p {
